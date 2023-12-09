@@ -29,7 +29,7 @@ addTaskContainer.addEventListener('mouseup', () => {
 // eslint-disable-next-line no-unused-vars
 async function addTaskToDB(task) {
     const rawData = await callApi({ // eslint-disable-line no-undef
-        url: 'http://localhost:8080/task/addTask',
+        url: 'http://34.201.82.147:80/task/addTask',
         method: 'POST',
         body: JSON.stringify({
             title: task.title,

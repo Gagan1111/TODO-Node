@@ -36,14 +36,14 @@ const arePasswordsEqual = (formData) => formData.password === formData.passwordR
 
 async function addUser(userData) {
     document.getElementById('error').innerHTML = '';
-    const rawData = await fetch('http://localhost:8080/user/signUp', {
+    const rawData = await fetch('http://34.201.82.147:80/user/signUp', {
         method: 'POST',
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
     });
     if (rawData.status === 200) {
-        window.location.href = 'http://localhost:8080/mainPage';
+        window.location.href = 'http://34.201.82.147:80/mainPage';
     } else {
         document.getElementById('error').innerHTML = 'User data already in use';
     }

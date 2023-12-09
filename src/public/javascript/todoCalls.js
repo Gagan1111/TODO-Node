@@ -1,4 +1,4 @@
-fetch('http://localhost:8080/task/getAllTasks')
+fetch('http://34.201.82.147:80/task/getAllTasks')
     .then(res => res.json())
     .then(data => addTasksByCategory(data));
 
@@ -42,7 +42,7 @@ const getCategory = {
 
 async function changeCategory(category, taskId) { // eslint-disable-line no-unused-vars
     await callApi({ // eslint-disable-line no-undef
-        url: 'http://localhost:8080/task/changeCategoryOfTask',
+        url: 'http://34.201.82.147:80/task/changeCategoryOfTask',
         method: 'POST',
         body: JSON.stringify({
             id: taskId,
@@ -52,8 +52,8 @@ async function changeCategory(category, taskId) { // eslint-disable-line no-unus
 }
 
 function logout() { // eslint-disable-line no-unused-vars
-    fetch('http://localhost:8080/user/logout');
-    window.location.href = 'http://localhost:8080/signIn';
+    fetch('http://34.201.82.147:80/user/logout');
+    window.location.href = 'http://34.201.82.147:80/signIn';
 }
 
 // eslint-disable-next-line no-unused-vars
