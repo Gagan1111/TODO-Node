@@ -1,0 +1,111 @@
+.task {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #505050;
+    width: 90%;
+    border-radius: 7px;
+    color: #ffffffcc;
+    cursor: move;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5vh;
+    transition-duration: .6s;
+}
+
+.task:hover {
+    scale: 1.02;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    transition-duration: .6s;
+}
+
+.category:nth-last-child(1) .task {
+    background-color: rgba(63, 150, 63, 0.699);
+    opacity: 0.85;
+}
+
+.category:nth-last-child(2) .task {
+    background-color: rgb(121, 177, 230);
+    opacity: 0.85;
+}
+
+.category:nth-last-child(3) .task {
+    background-color: grey;
+    opacity: 0.85;
+}
+
+.task > .buttonContainer {
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+
+.task:hover > .buttonContainer {
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+.taskTitle {
+    word-break: break-word;
+    margin-top: 1vh;
+    margin-bottom: -1vh;
+    padding: 0 1vw;
+    text-align: center;
+}
+
+.inputTask {
+    font-size: 15px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.buttonContainer {
+    margin-top: -1vh;
+    width: 100%;
+}
+
+.taskContent {
+    word-break: break-word;
+    padding: 0 1vw;
+    margin: 0;
+}
+
+.taskDate{
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}
+
+.buttonTask {
+    opacity: 0.7;
+    transition-duration: 0.2s;
+    float: right;
+    background: none;
+    margin: 0.25vh;
+    border: none;
+    border-radius: 15px;
+}
+
+.buttonTask:hover {
+    opacity: 1;
+    transition-duration: 0.2s;
+    transform: translateY(-2px);
+}
+
+.edit {
+    padding: 3px;
+}
+
+.delete {
+    padding: 0;
+    background: none;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .task {
+        font-size: 13px;
+    }
+
+    .taskTitle, .taskContent {
+        padding: 0 5%;
+    }
+}

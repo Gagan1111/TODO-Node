@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" type="image/x-icon" href="/images/Kanban-App-icon.ico">
+    <title>Kanban-Sign up</title>
+</head>
+
+<body>
+    <div class="backgroundImage"></div>
+    <div class="overlay">
+        <form onsubmit="return false">
+            <div class="inputContainerForLogin">
+                <h3 class="loginHeading">Sign up to Kanban</h3>
+                <label for="firstName">
+                    <input type="text" name="firstName" id="firstName" placeholder="First name" maxlength="32" required autocomplete="name">
+                </label>
+                <label for="lastName">
+                    <input type="text" name="lastName" id="lastName" placeholder="Last name" maxlength="32" required autocomplete="family-name">
+                </label>
+                <label for="email">
+                    <input type="email" name="email" id="email" placeholder="Email" maxlength="64" required autocomplete="email">
+                </label>
+                <label for="password">
+                    <input type="password" name="password" id="password" placeholder="Password" maxlength="128" required>
+                </label>
+                <label for="passwordRepeated">
+                    <input type="password" name="passwordRepeated" id="passwordRepeated" placeholder="Repeat password" maxlength="128" required>
+                </label>
+                <div id="error"></div>
+                <button id = "buttonSignUp" onclick="signUp()"><b>SIGN UP</b></button>
+            </div>
+        </form>
+    </div>
+    
+    <script src = "../javascript/signUp.js"></script>
+</body>
+</html>

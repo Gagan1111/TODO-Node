@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Tilt+Neon&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.backgroundImage {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    font-size: 100%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+form:hover {
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.40), 0 45px 26px rgba(0, 0, 0, 0.14);
+    transition-duration: .5s;
+}
+
+form {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.40), 0 10px 26px rgba(0, 0, 0, 0.14);
+    transition-duration: .5s;
+    width: fit-content;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.inputContainerForLogin {
+    width: fit-content;
+    height: fit-content;
+}
+
+.loginHeading {
+    display: block;
+    font-size: 2rem;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+input {
+    display: block;
+    width: 350px;
+    font-size: 1.25rem;
+    padding: 4px 12px 4px 12px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    transition-duration: .5s;
+}
+
+input:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    transition-duration: .5s;
+}
+
+input:focus {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    background-color: rgba(85, 83, 114, 0.48);
+}
+
+button {
+    padding: 6px 20px;
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5vh auto;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition-duration: 0.5s;
+    color: white;
+    background-color: rgb(85, 83, 114);
+}
+
+button:hover {
+    scale: 1.02;
+    transition-duration: 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+.openSignUp {
+    font-size: 0.75rem;
+}
+
+.openSignUp > a {
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.65);
+}
+
+a:hover {
+    color: rgb(85, 83, 114);
+}
+
+#error {
+    color: red;
+    margin: 1vh auto 0.25vw;
+}
+
+@media screen and (max-width: 400px) {
+    .loginHeading {
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 250px;
+        font-size: 1rem;
+    }
+
+    .buttonLogin {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .backgroundImage {
+        background-image: url("../images/login-full-size-backhground.png");
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .backgroundImage {
+        background-image: url("../images/login-smaller-size-backhground.png.png");
+    }
+}

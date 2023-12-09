@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mainPage.css">
+    <link rel="stylesheet" href="../css/task.css">
+    <link rel="stylesheet" href="../css/addTask.css">
+    <link rel="icon" type="image/x-icon" href="/images/Kanban-App-icon.ico">
+    <title>Kanban-Main-Page</title>
+</head>
+
+<body>
+
+<header>
+    <button class = "logout" onclick = "logout()">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </button>
+    <h1>KANBAN</h1>
+</header>
+
+
+
+<div class="kanbanContainer">
+    <div class="category todo" ondrop="drop(event)" ondragover="allowDrop(event)" about="1">
+        <h3 class="heading headingTodo">TODO</h3>
+        <button id="todoAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
+        <div class="tasks">
+
+        </div>
+    </div>
+
+    <div class="category inProgress" ondrop="drop(event)" ondragover="allowDrop(event)" about="3">
+        <h3 class="heading headingInProgress">IN PROGRESS</h3>
+        <button id="inProgressAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
+        <div class="tasks">
+
+        </div>
+    </div>
+
+    <div class="category done" ondrop="drop(event)" ondragover="allowDrop(event)" about="5">
+        <h3 class="heading headingDone">DONE</h3>
+        <button id="doneAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
+        <div class="tasks">
+
+        </div>
+    </div>
+</div>
+
+<div id="addTaskContainer">
+    <form onsubmit="return false">
+        <div class="addTaskRow">
+            <div class="addTaskColumnLeft">
+                <label>Category</label>
+            </div>
+            <div class="addTaskColumnRight chooseCategory">
+                <div class="radioBox">
+                    <input id="todoRadioButton" type="radio" name="selectTask" value="Todo">
+                    <label for="todoRadioButton">Todo</label>
+                </div>
+                <div class="radioBox">
+                    <input id="inProgressRadioButton" type="radio" name="selectTask" value="In Progress">
+                    <label for="inProgressRadioButton">In Progress</label>
+                </div>
+                <div class="radioBox">
+                    <input id="doneRadioButton" type="radio" name="selectTask" value="Done">
+                    <label for="doneRadioButton">Done</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="addTaskRow">
+            <div class="addTaskColumnLeft">
+                <label>Title</label>
+            </div>
+            <div class="addTaskColumnRight">
+                <input id="taskTitle" type="text" name="taskTitle" placeholder="E.g. Homework" maxlength="64">
+            </div>
+        </div>
+
+        <div class="addTaskRow">
+            <div class="addTaskColumnLeft">
+                <label>Content</label>
+            </div>
+            <div class="addTaskColumnRight">
+          <textarea id="taskContent" name="taskContent" placeholder="Write something..." maxlength="1024"></textarea>
+            </div>
+        </div>
+        <div class="date">
+            <div class="addTaskColumnLeft">
+                <label>Due Date</label>
+            </div>
+            <div class="addTaskColumnRight">
+                <input id="taskDate" type="date" name="dueDate">
+            </div>
+        </div>
+
+        <div class="addTaskRow">
+            <input id="submitTask" type="submit" value="Add" onclick="addTask()" name="submitTask">
+            <input id="closeAddTaskButton" type="button" value="Close" onclick="closeAddTaskContainer()" name="closeAddTask">
+        </div>
+    </form>
+</div>
+
+<template id="taskTemplate">
+    <div class="task dropTask" draggable="true" ondragstart="drag(event)">
+        <h3 class="taskTitle dropTask"></h3>
+        <p class="taskDate dropTask"></p>
+        <p class="taskContent dropTask"></p>
+        <div class="buttonContainer dropTask">
+            <button class="buttonTask dropTask delete">
+                <i class="fa-solid dropTask fa-circle-xmark" style="font-size:20px;color:red;"></i>
+            </button>
+            <button class="buttonTask dropTask edit">
+                <i class="fa-solid dropTask fa-pen" style="color:white;"></i>
+            </button>
+        </div>
+    </div>
+</template>
+
+<script src="https://kit.fontawesome.com/38c2b2b50e.js" crossorigin="anonymous"></script>
+<script src="../javascript/mainPage.js"></script>
+<script src="../javascript/addTask.js"></script>
+<script src="../javascript/todoCalls.js"></script>
+</body>
+
+</html>
