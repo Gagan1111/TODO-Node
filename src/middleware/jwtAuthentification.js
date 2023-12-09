@@ -7,7 +7,7 @@ dotenv.config({ path: path.join(process.cwd().replace('src\\middleware', '.env')
 export const authenticateToken = (req, res, next) => {
     const token = req.cookies.token;
     try {
-        req.email = jwt.verify(token, process.env.JWT_SECRET);
+        req.email = jwt.verify(token, 'secret');
         next();
     } catch (err) {
         res.clearCookie('token');
