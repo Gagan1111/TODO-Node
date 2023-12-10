@@ -52,8 +52,8 @@ async function changeCategory(category, taskId) { // eslint-disable-line no-unus
 }
 
 function logout() { // eslint-disable-line no-unused-vars
-    fetch('http://34.201.82.147:80/user/logout');
-    window.location.href = 'http://34.201.82.147:80/signIn';
+    fetch('http://54.173.213.126:80/user/logout');
+    window.location.href = 'http://54.173.213.126:80/signIn';
 }
 
 // eslint-disable-next-line no-unused-vars

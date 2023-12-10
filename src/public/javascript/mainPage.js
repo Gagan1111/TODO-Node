@@ -80,7 +80,7 @@ function drop(ev) {
 
 async function deleteTask(id) {
     await callApi({ // eslint-disable-line no-undef
-        url: 'http://34.201.82.147:80/task/deleteTask',
+        url: 'http://54.173.213.126:80/task/deleteTask',
         method: 'POST',
         body: JSON.stringify({ id })
     });
